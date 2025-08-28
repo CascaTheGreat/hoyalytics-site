@@ -1,0 +1,58 @@
+.alumni {
+    text-align: center;
+    padding-bottom: 100px;
+    background: $background-blue;
+    padding-top: 50px;
+}
+
+.alumni h1 {
+    font-size: 48px;
+}
+.alumni h4{
+    font-size: 20px;
+    margin-top: 10px;
+    font-weight: 500;
+    width: 95%;
+    margin-left: auto;
+    margin-right: auto;
+}
+.alumni-grid {
+    padding-top: 100px;
+    padding-bottom: 100px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 60px;
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.alumni-grid img {
+    height: 40px;
+    width: 100%;
+    object-fit: contain;
+}
+
+//900px media query
+@media (max-width: 1000px) {
+    .alumni-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (max-width: 750px) {
+    .alumni-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 500px) {
+
+    .alumni h1 {
+        font-size: 30px;
+    }
+    .alumni h4{
+        width: 90%;
+        font-size: 16px;
+    }
+}

@@ -1,0 +1,26 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    font-family: 'Avenir', Arial, sans-serif;
+}
+body,html{
+    min-height: 100%;
+}
+button, input[type="submit"]{
+    cursor: pointer;
+    font-family: "Avenir", Arial, sans-serif;
+}
+
+button:focus, input:focus, select:focus{
+    outline: none;
+}
+
+button:disabled{
+    cursor: default;
+}
+
+.is-active {
+    font-weight: bold;
+}

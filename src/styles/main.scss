@@ -1,0 +1,72 @@
+@import "./fonts.css";
+@import "./base.scss";
+@import "./colors.scss";
+
+@import "./components/landing.scss";
+@import "./components/navbar.scss";
+@import "./components/modal.scss";
+@import "./components/showcase.scss";
+@import "./components/mainInfo.scss";
+@import "./components/recruitmentLanding.scss";
+@import "./components/applicationProcess.scss";
+@import "./components/recruitmentTraining.scss";
+@import "./components/teams.scss";
+@import "./components/contactLanding.scss";
+@import "./components/footer.scss";
+@import "./components/teamLanding.scss";
+@import "./components/teamBoardMembers.scss";
+@import "./components/alumni.scss";
+@import "./components/cabfair.scss";
+@import "./components/divisions.scss";
+@import "./components/serviceLanding.scss";
+@import "./components/consultingServices.scss";
+@import "./components/trainingLanding.scss";
+@import "./components/trainingProgram.scss";
+@import "./components/trainingModules.scss";
+@import "./components/impact.scss";
+@import "./components/consultingContact.scss";
+@import "./components/analyticsArticles.scss";
+@import "./components/analyticsLanding.scss";
+@import "./components/mailchimp.scss";
+@import "./components/login.scss";
+@import "./components/application.scss";
+@import "./components/projects.scss";
+
+.coming-soon {
+  background: $main-gradient;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.loader {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 200px;
+}
+
+.coming-soon h2 {
+  font-size: 48px;
+  color: $extra-light-blue;
+  font-weight: 900;
+  padding-bottom: 30px;
+  text-align: center;
+  margin: 0 auto;
+}
+
+.coming-soon h5 {
+  color: white;
+  width: 70%;
+  font-size: 24px;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.container {
+  max-width: 1500px;
+  width: 95%;
+  margin: 0 auto;
+}

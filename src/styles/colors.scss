@@ -1,0 +1,16 @@
+//Primary Hoyalytics color scheme
+$dark-blue: #072F5F;
+$medium-blue: #1261A0;
+$light-blue: #3895D3;
+$extra-light-blue: #58CCED;
+$background-blue: #F3FAFF;
+
+
+$main-gradient: linear-gradient(120deg, $dark-blue 0%, $medium-blue 100%);
+
+$medium-gradient: linear-gradient(90deg, $medium-blue 0%, $light-blue 50%);
+
+$light-gradient: linear-gradient(90deg, $light-blue 0%, $extra-light-blue 100%);
+
+
+$orange: #F1BC55;

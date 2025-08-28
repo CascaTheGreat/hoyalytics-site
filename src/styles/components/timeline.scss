@@ -1,0 +1,230 @@
+/* recruitment-timeline.scss */
+@import "../base.scss";
+
+.recruitment-timeline-section {
+  padding: 20px 0 80px; /* Reduced top padding */
+}
+
+.timeline-container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0 20px;
+  position: relative;
+}
+
+.timeline-header {
+  text-align: center;
+  margin-bottom: 20px; /* Reduced spacing */
+}
+
+.timeline-heading {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 16px;
+  color: #222;
+}
+
+.timeline-description {
+  font-size: 1.125rem;
+  color: #555;
+  max-width: 700px;
+  margin: 0 auto 20px; /* Reduced bottom margin */
+}
+
+.track-labels {
+  display: flex;
+  justify-content: space-between;
+  margin: 20px 0 10px; /* Reduced margins */
+  width: 100%;
+}
+
+.track-label {
+  font-size: 1.5rem;
+  font-weight: 600;
+  position: relative;
+  
+  &.training {
+    text-align: left;
+    margin-left: 0%; /* Aligns better with the left boxes */
+    color: #3895D3;
+  }
+  
+  &.non-training {
+    text-align: right;
+    margin-right: 0%; /* Aligns better with the right boxes */
+    color: #3895D3;
+  }
+}
+
+.timeline-container {
+  position: relative;
+  min-height: 600px;
+  padding: 20px 0; /* Reduced padding */
+}
+
+.timeline-line {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  width: 3px;
+  background-color:#072F5F;
+  transform: translateX(-50%);
+}
+
+.timeline-item {
+  position: relative;
+  margin-bottom: 50px; /* Reduced margin */
+  display: flex;
+  align-items: center;
+  
+  &:last-child {
+    margin-bottom: 0;
+  }
+  
+  &.training {
+    justify-content: flex-start;
+    padding-right: 50%;
+  }
+  
+  &.non-training {
+    justify-content: flex-end;
+    padding-left: 50%;
+  }
+  
+  &.centered {
+    flex-direction: column;
+    justify-content: center;
+    padding: 0;
+  }
+}
+
+.timeline-node {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 0;
+  font-size: 1rem;
+  color: #072F5F;
+}
+
+.timeline-content {
+  width: 90%;
+  max-width: 450px;
+  position: relative;
+  
+  .training & {
+    &::after {
+      content: '';
+      position: absolute;
+      right: -37px;
+      top: 50%;
+      width: 37px;
+      height: 2px;
+      background-color: #1261A0;
+    }
+  }
+  
+  .non-training & {
+    &::before {
+      content: '';
+      position: absolute;
+      left: -37px;
+      top: 50%;
+      width: 37px;
+      height: 2px;
+      background-color: #1261A0;
+    }
+  }
+  
+  .centered & {
+    margin: 0;
+    width: 100%;
+    max-width: 900px;
+  }
+}
+
+.season {
+  font-size: 1.25rem;
+  font-weight: 700;
+  margin-bottom: 12px;
+  color: #333;
+}
+
+.content-box {
+  background-color: #FFF; // Changed from white to dark blue
+  border-radius: 12px;
+  padding: 24px;
+  box-shadow: 0 4px 12px rgba(0, 100, 255, 0.15);
+  position: relative;
+  border: 2px solid #1261A0;  // Changed from medium blue to light blue for better contrast
+  
+  // Blue outline similar to the sketch
+  &::before {
+    content: '';
+    position: absolute;
+    top: -5px;
+    left: -5px;
+    right: -5px;
+    bottom: -5px;
+    border-radius: 16px;
+    border: 2px solid #1261A0;  // Changed to extra light blue for visibility
+    z-index: -1;
+    opacity: 0.5;
+  }
+}
+
+.icon {
+  font-size: 1.75rem;
+  color: #072F5F;  // Changed from dark blue to extra light blue for contrast
+  margin-bottom: 16px;
+}
+
+.title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: 12px;
+  color: #222;;  // Changed from dark to white for readability
+}
+
+.description {
+  font-size: 1rem;
+  line-height: 1.5;
+  color: #555;  // Changed from dark to white for readability
+}
+
+.button-container {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  margin-top: 40px; /* Reduced top margin */
+}
+
+.primary-button, .secondary-button {
+  padding: 12px 24px;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 1rem;
+  transition: all 0.2s ease-in-out;
+  text-decoration: none;
+}
+
+.primary-button {
+  background-color: #0085FF;
+  color: white;
+  border: none;
+  
+  &:hover {
+    background-color: darken(#0085FF, 10%);
+  }
+}
+
+.secondary-button {
+  background-color: transparent;
+  color: #0085FF;
+  border: 2px solid #0085FF;
+  
+  &:hover {
+    background-color: rgba(0, 133, 255, 0.1);
+  }
+}

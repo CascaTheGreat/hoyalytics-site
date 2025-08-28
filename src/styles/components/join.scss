@@ -1,0 +1,264 @@
+/* join.scss */
+@import '../colors';
+
+.join-page {
+  width: 90%;
+  max-width: 1500px;
+  margin: 0 auto;
+  
+  section {
+    padding: 5rem 0;
+  }
+  
+  .container {
+    margin: 0 auto;
+    padding: 0 2rem;
+  }
+  
+  h2, h3 {
+    font-weight: 600;
+  }
+  
+  h1 {
+    font-weight: 800;
+    font-size: 96px;
+    margin-bottom: 1rem;
+    color: #1260A1; 
+    background-image: linear-gradient(90deg, #1260A1 0%, #3996D4 50%); 
+    background-clip: text; 
+    -webkit-background-clip: text; 
+    -webkit-text-fill-color: transparent; 
+  }
+  
+  h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+    color: #4682B4;
+  }
+  
+  h3 {
+    font-size: 1.5rem;
+    margin: 1.5rem 0 1rem;
+    color: #333;
+  }
+  
+  p {
+    line-height: 1.6;
+    margin-bottom: 1rem;
+  }
+  
+  .section-title {
+    text-align: center;
+    margin-bottom: 0.5rem;
+  }
+  
+  .section-description {
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto;
+    font-size: 1.2rem;
+    color: #666;
+  }
+  
+  /* Hero Section */
+  .join-hero {
+    background: linear-gradient(rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.9));
+    text-align: center;
+    padding: 10rem 0;
+    margin-bottom: 5rem;
+    
+    .subtitle {
+      font-size: 1.5rem;
+      max-width: 800px;
+      margin: 0 auto 2.5rem;
+      color: #666;
+    }
+    
+    .cta-button {
+      display: inline-block;
+      background-color: #1261A0;
+      color: white;
+      padding: 0.8rem 2rem;
+      border-radius: 4px;
+      text-decoration: none;
+      font-weight: 500;
+      font-size: 1.1rem;
+      transition: background-color 0.3s;
+      
+      &:hover {
+        background-color: darken(#072F5F, 10%);
+      }
+    }
+  }
+  
+  /* Info Section */
+  .join-info {
+    background-color: #f8f9fa;
+    
+    .info-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 3rem;
+      
+      @media (min-width: 768px) {
+        grid-template-columns: 1fr 1fr;
+        align-items: center;
+      }
+    }
+    
+    .info-content {
+      p {
+        font-size: 1.1rem;
+        margin-bottom: 1.5rem;
+      }
+    }
+    
+    .qualities-list {
+      list-style-type: none;
+      padding: 0;
+      
+      li {
+        margin-bottom: 0.8rem;
+        position: relative;
+        padding-left: 1.5rem;
+        
+        &:before {
+          content: "•";
+          color: #4682B4;
+          font-weight: bold;
+          position: absolute;
+          left: 0;
+        }
+      }
+    }
+    
+    .info-image {
+      img {
+        width: 100%;
+        border-radius: 8px;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+      }
+    }
+  }
+  
+  /* Join Process Section */
+  .join-process {
+    background-color: white;
+    
+    // Timeline component will be included here
+    // Additional styling for timeline is in the Timeline.scss file
+  }
+  
+  /* Testimonials Section */
+  .join-testimonials {
+    background-color: #f0f4f8;
+    
+    h2 {
+      text-align: center;
+      margin-bottom: 3rem;
+    }
+    
+    .testimonials-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 2rem;
+      
+      @media (min-width: 768px) {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+    
+    .testimonial-card {
+      background-color: white;
+      padding: 2rem;
+      border-radius: 8px;
+      box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+      
+      p {
+        font-style: italic;
+        font-size: 1.1rem;
+      }
+      
+      .testimonial-author {
+        margin-top: 1.5rem;
+        
+        .author-name {
+          font-weight: 600;
+          margin-bottom: 0.2rem;
+        }
+        
+        .author-role {
+          color: #666;
+          font-size: 0.9rem;
+          margin: 0;
+        }
+      }
+    }
+  }
+  
+  /* FAQ Section */
+  .join-faq {
+    background-color: white;
+    
+    h2 {
+      text-align: center;
+      margin-bottom: 3rem;
+    }
+    
+    .faq-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 2rem;
+      
+      @media (min-width: 768px) {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+    
+    .faq-item {
+      h3 {
+        color: #4682B4;
+        margin-bottom: 0.8rem;
+      }
+      
+      p {
+        color: #555;
+      }
+    }
+  }
+  
+  /* CTA Section */
+  .join-cta {
+    background-color: #4682B4;
+    color: white;
+    text-align: center;
+    padding: 4rem 0;
+    
+    h2 {
+      color: white;
+    }
+    
+    p {
+      max-width: 700px;
+      margin: 0 auto 2rem;
+      font-size: 1.2rem;
+    }
+    
+    .cta-button {
+      display: inline-block;
+      background-color: white;
+      color: #4682B4;
+      padding: 0.8rem 2rem;
+      border-radius: 4px;
+      text-decoration: none;
+      font-weight: 500;
+      font-size: 1.1rem;
+      transition: all 0.3s;
+      
+      &:hover {
+        background-color: rgba(255, 255, 255, 0.9);
+        transform: translateY(-2px);
+      }
+    }
+  }
+}

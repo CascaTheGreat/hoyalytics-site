@@ -1,0 +1,160 @@
+.navbar-icon {
+  position: fixed;
+  right: 50px;
+  top: 50px;
+
+  display: none;
+  color: white;
+  transition: 1s all;
+}
+.toggled {
+  color: white;
+}
+.navbar-icon:hover {
+  cursor: pointer;
+}
+
+.navBar-container {
+  padding-top: 50px;
+  padding-bottom: 50px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navBar-logo {
+  height: 30px;
+}
+
+.navBar-right {
+  display: flex;
+  flex-direction: row;
+  width: 80%;
+  justify-content: space-between;
+  align-items: center;
+  transition: 0.5s all;
+}
+
+.navBar-right-link {
+  font-size: 18px;
+  transition: 0.2s ease-in-out;
+  font-weight: 500;
+  margin: 0 25px;
+  color: #fff;
+  text-decoration: none;
+}
+
+.navBar-right-social {
+  margin-left: 50px;
+}
+.navBar-right-social a {
+  font-size: 24px;
+  font-weight: 500;
+  margin: 0 5px;
+  color: #fff;
+  text-decoration: none;
+}
+
+.navBar-right-link:hover {
+  padding-bottom: 5px;
+  border-bottom: 2px solid white;
+}
+
+.hidden {
+  display: flex;
+}
+.alt-color,
+.alt-color a {
+  color: $dark-blue;
+}
+
+.alt-color a:hover {
+  border-color: $dark-blue;
+}
+
+.navBar-button {
+  padding: 14px 28px;
+  border-radius: 999px;
+  background: $light-blue;
+  font-size: 18px !important;
+  font-weight: 800 !important;
+  margin-left: 20px !important;
+  transition: 0.3s all ease-in !important;
+}
+.navBar-button:hover {
+  background: $medium-blue;
+  cursor: pointer;
+}
+//mobile layout
+
+@media (max-width: 1250px) {
+  .navbar-icon {
+    display: block;
+    z-index: 2;
+  }
+
+  .hidden {
+    display: none;
+  }
+  .navBar-right {
+    position: fixed;
+
+    right: 0px;
+    top: 0px;
+    z-index: 1;
+    flex-direction: column;
+    background: $dark-blue;
+    height: 100vh;
+    align-items: flex-end;
+  }
+  .navBar-right-links {
+    display: flex;
+    flex-direction: column;
+    justify-content: right;
+    align-items: flex-end;
+    padding: 0;
+
+    text-align: right;
+    width: fit-content;
+    margin-right: 50px;
+    margin-top: 120px;
+
+    margin-bottom: 40px;
+  }
+  .navBar-right-link {
+    margin: 0;
+
+    margin-bottom: 20px;
+    color: #fff;
+  }
+  .navBar-right-social {
+    margin-right: 50px;
+    padding-bottom: 100px;
+  }
+  .navBar-right-social a {
+    margin-bottom: 20px;
+
+    color: #fff;
+  }
+  .navBar-button {
+    position: absolute;
+    top: 300px;
+    right: 40px;
+  }
+}
+@media (max-width: 500px) {
+  .navBar-container {
+    padding-top: 40px;
+    padding-bottom: 30px;
+  }
+  .navbar-icon {
+    right: 5%;
+
+    top: 35px;
+    font-size: 22px;
+  }
+  .navBar-logo {
+    height: 22px;
+  }
+}

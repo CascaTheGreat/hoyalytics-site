@@ -1,0 +1,87 @@
+.recruitment-training {
+    position: relative;
+    background: #B9D9FF;
+    width: 100%;
+}
+
+.recruitment-training img {
+    position: absolute;
+    top: -2px;
+    left: calc(30% - 35px);
+}
+.recruitment-training-content {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.recruitment-training-content-left {
+    width: 20%;
+    padding-left: 5%;
+    padding-right: 5%;
+    padding-top: 150px;
+}
+
+.recruitment-training-content-right {
+    width: 40%;
+    font-size: 24px;
+    padding-right: 5%;
+    padding-left: 5%;
+    padding-top: 150px;
+    padding-bottom: 100px;
+}
+
+.recruitment-training-content-left-title {
+    font-size: 48px;
+    font-weight: 800;
+    padding-bottom: 30px;
+    color: #2C67AC;
+}
+
+.recruitment-training-content-left-text {
+    font-size: 20px;
+    font-weight: 600;
+}
+
+//1200 media query
+@media (max-width: 1200px) {
+    .recruitment-training img {
+        display: none;
+    }
+
+}
+//800px media query
+@media (max-width: 800px) {
+    .recruitment-training-content {
+        flex-direction: column;
+        padding-top: 40px;
+        padding-bottom: 40px;
+    }
+    .recruitment-training-content-left {
+        width: 100%;
+        padding: 0;
+        margin: 0;
+    }
+    .recruitment-training-content-right {
+        width: 100%;
+        padding: 0;
+        margin: 0;
+
+    }
+    .recruitment-training-content-left-title {
+        text-align: center;
+        font-size: 36px;
+        width: 90%;
+        margin: 10px auto;
+    }
+    .recruitment-training-content-left-text {
+        width: 100%;
+        text-align: center;
+    }
+    .recruitment-training-content-right {
+        width: 90%;
+        margin: 20px auto;
+        font-size: 18px;
+        margin-top: 25px;
+        text-align: center;
+    }
+}

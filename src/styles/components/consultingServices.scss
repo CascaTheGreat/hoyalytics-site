@@ -1,0 +1,95 @@
+.consulting-services {
+  background: linear-gradient(180deg, $background-blue 0%, white 100%);
+  padding-top: 100px;
+}
+
+.consulting-services-title {
+  font-size: 40px;
+  font-weight: 500;
+
+  color: $medium-blue;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.consulting-services-subtitle {
+  font-size: 20px;
+  font-weight: 500;
+  width: 60%;
+  color: $medium-blue;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  padding-bottom: 30px;
+}
+
+.consulting-services-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 40px;
+  width: 95%;
+  max-width: 1300px;
+  margin-top: 30px;
+  margin-bottom: 130px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.consulting-services-card {
+  box-shadow: 0px 2px 10px 0px #aaa;
+  border-radius: 10px;
+  padding: 30px;
+  background: white;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+
+  align-items: center;
+}
+.consulting-services-card img {
+  width: 40%;
+  max-width: 100px;
+  margin-top: 30px;
+}
+.consulting-services-card h3 {
+  font-size: 24px;
+  font-weight: 800;
+  text-transform: uppercase;
+  color: black;
+  margin-top: 20px;
+}
+.consulting-services-card ul {
+  list-style: none;
+  margin-top: 10px;
+  line-height: 32px;
+  padding: 0;
+  font-size: 18px;
+  font-weight: 300;
+}
+
+@media (max-width: 1200px) {
+  .consulting-services-grid {
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    grid-template-columns: 1fr 1fr;
+  }
+  .consulting-services-title {
+    padding-top: 40px;
+  }
+}
+
+@media (max-width: 800px) {
+  .consulting-services-grid {
+    grid-template-columns: 1fr;
+    width: 90%;
+  }
+  .consulting-services-title {
+    font-size: 30px;
+  }
+  .consulting-services-subtitle {
+    font-size: 16px;
+    width: 80%;
+  }
+}

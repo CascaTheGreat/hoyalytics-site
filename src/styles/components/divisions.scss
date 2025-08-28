@@ -1,0 +1,153 @@
+.divisions {
+    width: 100%;
+    padding-top: 70px;
+    padding-bottom: 70px;
+}
+
+.divisions-container {
+    width: 90%;
+    max-width: 1500px;
+    margin: 0 auto;
+}
+
+.divisions-header {
+    font-size: 52px;
+    font-weight: 800;
+    width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+    background: $medium-gradient;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.divisions-subheader {
+    font-size: 20px;
+    font-weight: 600;
+    width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+    padding-bottom: 30px;
+    text-align: center;
+}
+
+.divisions-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 40px;
+    max-width: 1200px;
+    margin-top: 30px;
+    padding-bottom: 30px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.division {
+    box-shadow: 0px 2px 15px 0px #aaa;
+    border-radius: 10px;
+    padding: 50px;
+
+}
+
+.division-icon {
+    width: 70px;
+    margin-top: 30px;
+    height: 70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+.division-icon img{
+
+    width: 100%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+.division-title{
+    text-transform: uppercase;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    font-size: 36px;
+}
+.division-description{
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 20px;
+    padding-bottom: 60px;
+}
+.division-link{
+    font-size: 16px;
+    margin-top: 40px;
+    font-weight: 800;
+    text-align: center;
+    color: $dark-blue;
+    text-decoration: none;
+    padding: 10px 40px;
+    border: 1px solid;
+    border-radius: 5px;
+}
+
+@media (max-width: 1200px) {
+    .division {
+        padding: 30px;
+    }
+    .division-title {
+        font-size: 30px;
+    }
+
+}
+@media (max-width: 1000px) {
+
+    .divisions-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .division {
+        padding: 50px;
+    }
+}
+
+@media (max-width: 700px) {
+    .divisions-header {
+        font-size: 40px;
+    }
+    .divisions-subheader {
+        font-size: 18px;
+        text-align: center;
+        margin-top: 15px;
+    }
+    .divisions-grid {
+        grid-template-columns: repeat(1, 1fr);
+        width: 95%;
+        max-width: 500px;
+    }
+    .division {
+        padding: 50px;
+    }
+    .division-title {
+        font-size: 28px;
+    }
+    .division-description {
+        font-size: 16px;
+    }
+    .division-link {
+        font-size: 18px;
+    }
+}
+
+@media (max-width: 500px) {
+    .division {
+        padding: 30px;
+        padding-bottom: 50px;
+    }
+    .divisions-header {
+        font-size: 30px;
+    }
+    .divisions-subheader {
+        font-size: 18px;
+        text-align: center;
+        margin-top: 15px;
+    }
+    
+}

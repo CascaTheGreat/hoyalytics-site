@@ -1,0 +1,130 @@
+.application-process {
+    display: flex;
+    flex-direction: row;
+    background: $extra-light-blue;
+
+    height: 100%;
+}
+
+.application-process-left {
+    width: 20%;
+    padding-left: 5%;
+    padding-right: 5%;
+    border-right: 10px solid $dark-blue;
+    padding-top: 250px;
+}
+
+.application-process-left-title {
+    font-size: 24px;
+    font-weight: 600;
+    padding-bottom: 30px;
+    color: #2C67AC;
+}
+
+.application-process-right {
+    width: 70%;
+}
+
+.application-process-right-item {
+    display: flex;
+    flex-direction: row;
+    margin-left: -35px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+.application-process-right-item-circle {
+    background: $dark-blue;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    margin-right: 50px;
+    text-align: center;
+    color: white;
+}
+.application-process-right-item-circle-number {
+    font-size: 20px;
+    font-weight: 800;
+}
+.application-process-right-item-circle-text {
+    font-size: 12px;
+    font-weight: 600;
+    margin-top: -5px;
+}
+
+.application-process-right-item-title {
+    font-size: 24px;
+    font-weight: 900;
+}
+
+.application-process-right-item-time {
+    font-size: 14px;
+    color: #616161;
+    font-weight: 600;
+    margin: 5px 0;
+}
+
+.application-process-right-item-text {
+    font-size: 16px;
+    width: 70%;
+    line-height: 32px;
+}
+
+//1000px media query
+@media (max-width: 1000px) {
+    .application-process {
+        flex-direction: column;
+    }
+    .application-process-left {
+        width: 100%;
+        padding-left: 0;
+        padding-right: 0;
+        border-right: none;
+        padding-top: 0;
+    }
+    .application-process-left-title {
+        text-align: center;
+        margin-top: 40px;
+    }
+    .application-process-left-text {
+        text-align: center;
+        width: 90%;
+        margin: 0px auto;
+    }
+    .application-process-right {
+        width: 90%;
+        margin: 0px auto;
+    }
+    .application-process-right-item {
+        display: flex;
+        flex-direction: column;
+        margin-left: 0;
+        align-items: center;
+        margin-top: 50px;
+        margin-bottom: 50px;
+        background: rgba(white, 0.5);
+        padding: 30px;
+    }
+    .application-process-right-item-circle {
+        width: 80px;
+        height: 80px;
+        border-radius: 50%;
+        margin-right: 0;
+        text-align: center;
+        color: white;
+    }
+    .application-process-right-item-text {
+        text-align: center;
+        margin-top: 35px;
+    }
+    .application-process-right-item-text {
+        text-align: center;
+        margin: 5px auto;
+        width: 90%;
+        max-width: 600px;
+    }
+}

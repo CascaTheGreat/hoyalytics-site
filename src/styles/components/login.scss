@@ -1,0 +1,52 @@
+.login{
+    background: $background-blue;
+    min-height: 100vh;
+}
+
+.login-title{
+    font-size: 60px;
+    font-weight: 800;
+    background: $medium-gradient;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    padding-bottom: 20px;
+    margin-top: 150px;
+    width: fit-content;
+}
+.login-subtitle {
+    font-size: 20px;
+    line-height: 32px;
+    font-weight: 300;
+    padding-bottom: 30px;
+}
+
+.login button {
+    background: $medium-gradient;
+    border: none;
+    border-radius: 5px;
+    padding: 15px 40px;
+    font-size: 22px;
+    font-weight: 600;
+    color: white;
+    cursor: pointer;
+    transition: 0.3s;
+    margin-right: 10px;
+}
+
+.login button:hover {
+    padding: 18px 45px;
+    cursor: pointer;
+}
+.login-content {
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    align-items: center;
+    margin-top: 20px;
+    margin-bottom: 500px;
+}
+
+
+.login-content p {
+    margin-left: 5px;
+}

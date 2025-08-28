@@ -1,0 +1,123 @@
+.training-program {
+  background: #0a1d33;
+}
+
+.training-program-container {
+  width: 90%;
+  max-width: 1500px;
+  margin: 0 auto;
+  padding-top: 100px;
+  padding-bottom: 100px;
+}
+
+.training-program-title {
+  font-size: 48px;
+  font-weight: 800;
+  background: $light-gradient;
+  width: fit-content;
+  margin-left: auto;
+  margin-right: auto;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-align: center;
+  padding-bottom: 10px;
+}
+.training-program-subtitle {
+  font-size: 20px;
+  font-weight: 600;
+  width: 75%;
+  margin-bottom: 40px;
+  line-height: 32px;
+  padding-bottom: 20px;
+  color: white;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+.training-program-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.training-program-item {
+  border-radius: 20px;
+  border: 2px solid $light-blue;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 20px;
+  justify-content: start;
+  padding-top: 70px;
+  min-height: 60vh;
+}
+.training-program-lighter {
+  border: 2px solid $medium-blue;
+}
+.training-program-item h2 {
+  font-size: 24px;
+  font-weight: 600;
+  color: white;
+  text-align: center;
+  margin-top: 20px;
+}
+
+.training-program-item h6 {
+  color: white;
+  margin-top: 10px;
+  width: 80%;
+  text-align: center;
+  font-size: 12px;
+  margin-bottom: 20px;
+  font-weight: 300;
+}
+
+.training-program-item ul {
+  padding: 0;
+  margin: 0;
+  text-decoration-color: $light-blue;
+  margin-top: 40px;
+  width: 80%;
+}
+.training-program-item li {
+  font-size: 12px;
+  font-weight: 300;
+  color: white;
+  margin-bottom: 10px;
+}
+
+.training-program-item a {
+  color: $dark-blue;
+  background: $extra-light-blue;
+  text-decoration: none;
+  font-size: 16px;
+  text-align: center;
+
+  font-weight: 800;
+  margin-top: 20px;
+  border-radius: 3px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  margin-bottom: 25px;
+  width: 80%;
+}
+
+@media only screen and (max-width: 800px) {
+  .training-program-title {
+    font-size: 32px;
+  }
+  .training-program-subtitle {
+    font-size: 20px;
+    width: 90%;
+  }
+  .training-program-content {
+    flex-direction: column;
+  }
+  .training-program-item {
+    width: 90%;
+    margin: 20px auto;
+  }
+}

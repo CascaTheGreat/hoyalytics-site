@@ -1,0 +1,136 @@
+.projects {
+  height: 400vh;
+  overflow: visible;
+  background: linear-gradient(0deg, #00132a 0%, $medium-blue 50%, #00132a 80%);
+
+  scroll-behavior: smooth;
+}
+
+.projects-container {
+  width: 100%;
+  background: grey;
+  max-width: 1500px;
+  position: sticky;
+  height: min-content;
+  margin: 0 auto;
+  scroll-behavior: smooth;
+  top: 0;
+}
+
+.project-graphic {
+  width: 50%;
+  position: absolute;
+  top: 50px;
+  right: 0px;
+  transition: 0.5s all;
+}
+
+.shift-left {
+  transition: 0.5s all;
+  animation: moveLeft 1s forwards;
+}
+
+.projects h1 {
+  font-size: 64px;
+  background: $light-gradient;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.projects-text-1 {
+  width: 40%;
+  height: 500px;
+  position: absolute;
+  color: white;
+  display: flex;
+  top: 150px;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.projects-text-2,
+.projects-text-3 {
+  transition: 0.5s all;
+  width: 40%;
+  position: absolute;
+  right: 100px;
+  top: 200px;
+  padding-bottom: 100px;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  opacity: 1;
+}
+
+.projects-graphic-pointer {
+  position: absolute;
+  width: 7%;
+  right: 50%;
+  top: 350px;
+}
+.projects-text-2 h4,
+.projects-text-3 h4 {
+  font-size: 24px;
+  background: $light-gradient;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.projects-text-2 h2,
+.projects-text-3 h2 {
+  font-size: 36px;
+  margin-top: 5px;
+  margin-bottom: 10px;
+}
+.projects-text-1 p,
+.projects-text-2 p,
+.projects-text-3 p {
+  font-size: 20px;
+  line-height: 32px;
+  margin-bottom: 30px;
+}
+
+.projects-hidden {
+  transition: 0.5s all;
+  opacity: 0;
+}
+@keyframes moveLeft {
+  from {
+    right: 0px;
+  }
+  to {
+    right: 50%;
+  }
+}
+
+@media only screen and (max-width: 1100px) {
+  .project-graphic {
+    height: 20vh;
+    position: absolute;
+    top: 5vh;
+    width: auto;
+    right: 15%;
+    transition: 0.5s all;
+  }
+  .shift-left {
+    animation: none;
+  }
+  .projects-text-1 {
+    width: 90%;
+    position: absolute;
+    top: 20vh;
+    right: 5%;
+    z-index: 2;
+  }
+  .projects-text-2,
+  .projects-text-3 {
+    width: 90%;
+    position: absolute;
+    right: 5%;
+    top: 20vh;
+    padding-bottom: 100px;
+    color: white;
+    display: flex;
+    flex-direction: column;
+  }
+}
