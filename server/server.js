@@ -1,15 +1,19 @@
-const express = require("express");
-const { GoogleSpreadsheet } = require("google-spreadsheet");
-const { JWT } = require("google-auth-library");
-const path = require("path");
-const nodemailer = require("nodemailer");
-const cors = require("cors");
+import express from "express";
+import { GoogleSpreadsheet } from "google-spreadsheet";
+import { auth } from "google-auth-library";
 
+import nodemailer from "nodemailer";
+import cors from "cors";
+import path, { join } from "path";
+import { fileURLToPath } from "url";
 //create the express app
 const app = express();
 const port = process.env.PORT || 3000;
 
-const publicPath = path.join(__dirname, "..", "build");
+const __filename = fileURLToPath(import.meta.url); // get the resolved path to the file
+const __dirname = path.dirname(__filename); // get the name of the directory
+const publicPath = join(__dirname, "..", "build");
+console.log("Serving files from: ", publicPath);
 
 //allow cross-origin requests (this is used for the web scraping download)
 app.use(cors());
@@ -26,17 +30,15 @@ const transporter = nodemailer.createTransport({
   service: "gmail",
   port: 465,
   auth: {
-    user: "reeduhlik@gmail.com",
+    user: "ledlowleo@gmail.com",
     pass: process.env.EMAIL_APP_PASSWORD,
   },
 });
 
-//used to authenticate with the google sheets api
-const serviceAccountAuth = new JWT({
-  email: process.env.GOOGLE_SERVICE_ACCOUNT_EMAIL,
-  key: process.env.GOOGLE_PRIVATE_KEY.replace(/\\n/g, "\n"),
-  scopes: ["https://www.googleapis.com/auth/spreadsheets"],
-});
+const credsJson = JSON.parse(process.env.CREDS);
+
+const serviceAccountAuth = auth.fromJSON(credsJson);
+serviceAccountAuth.scopes = ["https://www.googleapis.com/auth/spreadsheets"];
 
 const SPREADSHEET_ID = process.env.GOOGLE_SPREADSHEET_ID;
 
@@ -48,8 +50,13 @@ app.post("/addNetID", async (req, res) => {
   }
 
   console.log("GOT ID: " + netID);
+  console.log(serviceAccountAuth);
 
-  const doc = new GoogleSpreadsheet(SPREADSHEET_ID, serviceAccountAuth);
+  console.log("Adding ID to Google Sheets");
+  const doc = new GoogleSpreadsheet(
+    "1IJiL4hvm9dfXA90tCayQ1c-PI8ifR-Z0NxoqdZx8rkg",
+    serviceAccountAuth
+  );
 
   try {
     await doc.loadInfo();
@@ -66,7 +73,7 @@ app.post("/send", (req, res) => {
   //send email to hoyalytics email and cc the user
 
   const mailOptions = {
-    from: "reeduhlik@gmail.com",
+    from: "ledlowleo@gmail.com",
     to: "hoyalytics.clients@gmail.com",
     cc: req.body.email,
     subject: "Consulting Inquiry (From Hoyalytics Website)",
@@ -94,11 +101,13 @@ app.get("/web-scraper", function (req, res) {
 });
 
 app.get("*", (req, res) => {
+  console.log("Serving index.html");
+  console.log(publicPath);
   res.sendFile(path.join(publicPath, "index.html"));
 });
 
 app.listen(port, () => {
   console.log(
-    `Server running on port ${port}.  Files served from ${publicPath}`,
+    `Server running on port ${port}.  Files served from ${publicPath}`
   );
 });

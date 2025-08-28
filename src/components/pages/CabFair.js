@@ -31,8 +31,6 @@ const CabFair = () => {
 
   useEffect(() => {
     const keyDownHandler = (event) => {
-      console.log("User pressed: ", event.key);
-
       if (event.key === "Enter") {
         event.preventDefault();
         if (netID.length > 0 && showModal === 0) {
