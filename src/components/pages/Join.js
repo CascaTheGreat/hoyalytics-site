@@ -119,6 +119,18 @@ const Join = () => {
         </div>
       </section>
 
+      <section id="application" className="join-process">
+        <div className="container">
+          <h2>Application Process</h2>
+          <p>
+            From application to becoming a full team member, we offer two
+            distinct pathways to join our team with common interview stages for
+            all candidates.
+          </p>
+        </div>
+        <Timeline />
+      </section>
+
       <section className="join-faq">
         <div className="container">
           <h2>Frequently Asked Questions</h2>
