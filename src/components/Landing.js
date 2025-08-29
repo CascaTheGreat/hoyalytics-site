@@ -6,7 +6,7 @@ import { TypeAnimation } from "react-type-animation";
 
 const Landing = () => {
   //Modify these variables to change the homepage text
-  const header = "Georgetown’s premier Data Analytics and Consulting club.";
+  const header = "Georgetown's Premier Data Analytics Consulting Organization.";
   const subHeader =
     "We use advanced technical skills to draw unique insights from data, enabling our clients to grow and succeed.";
 
@@ -26,7 +26,7 @@ const Landing = () => {
           <h3 className="landing-subtitle">{subHeader}</h3>
         </AnimationOnScroll>
         <a
-          href="https://forms.gle/ETd9adE3FpWHDT8x6"
+          href="https://docs.google.com/forms/d/e/1FAIpQLSfARUMKCcsAYwp4dbdBfViS_xsQSfcVGYAa6-0vmHWWu-paLg/viewform"
           target="_blank"
           className="landing-button"
         >

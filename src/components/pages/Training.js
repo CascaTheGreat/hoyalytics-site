@@ -8,7 +8,6 @@ const Training = () => {
     <div>
       <TrainingLanding />
       <TrainingProgram />
-      <TrainingModules />
       <Footer />
     </div>
   );

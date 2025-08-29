@@ -49,9 +49,10 @@ const TrainingProgram = () => {
               </li>
             </ul>
             <a
-              href="https://forms.gle/G28g7GRhCW5KSw5V7"
+              href="https://docs.google.com/forms/d/e/1FAIpQLSfARUMKCcsAYwp4dbdBfViS_xsQSfcVGYAa6-0vmHWWu-paLg/viewform"
               target="_blank"
-              className="training-consulting-register">
+              className="training-consulting-register"
+            >
               Register Now
             </a>
           </div>
@@ -82,9 +83,10 @@ const TrainingProgram = () => {
               </li>
             </ul>
             <a
-              href="https://forms.gle/G28g7GRhCW5KSw5V7"
+              href="https://docs.google.com/forms/d/e/1FAIpQLSfARUMKCcsAYwp4dbdBfViS_xsQSfcVGYAa6-0vmHWWu-paLg/viewform"
               target="_blank"
-              className="training-consulting-register">
+              className="training-consulting-register"
+            >
               Register Now
             </a>
           </div>
