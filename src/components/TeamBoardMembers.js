@@ -8,58 +8,59 @@ import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
 const TeamBoardMembers = () => {
   const execBoard = [
     {
-      firstName: "Maggie",
-      lastName: "Shen",
-      title: "Chief Executive Officer",
-      description: "Maggie is a junior in the College double majoring in Mathematics and Computer Science and minoring in Economics. She has previosuly interned at PWC. Outside of Hoyalytics, she enjoys doing photography, playing poker, and exploring new restaurants.",
-      email: "xs196@georgetown.edu", 
-      linkedin: "https://www.linkedin.com/in/maggie-shen/",
-    },
-    {
       firstName: "Sonya",
       lastName: "Savelyev",
+      title: "Chief Executive Officer",
+      description:
+        "Sonya is a junior in the College studying Biochemistry and Statistics. At Georgetown, she is also a computational biophysics researcher. Outside of academics, she enjoys playing tennis, learning piano pieces, and exploring new recipes. ",
+      email: "sas559@georgetown.edu",
+      linkedin: "https://www.linkedin.com/in/sonyasavelyev/",
+    },
+    {
+      firstName: "Elizabeth",
+      lastName: "Astorina",
       title: "Chief Operating Officer",
       description:
-        "Sonya is a sophomore in the College studying Biochemistry and Statistics. Outside of Hoyalytics, she is a computational researcher for a biophysics research lab at Georgetown. In her free time, she loves playing tennis, learning piano pieces, and exploring new recipes.",
-        email: "sas559@georgetown.edu",
-        linkedin: "https://www.linkedin.com/in/sonya-savelyev-189568265/"
+        "Elizabeth is a junior in the College studying Mathematics and Computer Science. She gained experience last summer interning with RainFocus and D.C. United, and her interests include sports, insurance, and business marketing analytics. Outside the classroom, Elizabeth enjoys rock climbing, baking, working out, and watching dystopian films.",
+      email: "eqa5@georgetown.edu",
+      linkedin: "https://www.linkedin.com/in/lizzie-astorina-75a278307/",
     },
     {
-      firstName: "Christopher",
-      lastName: "Tengey",
+      firstName: "Ty",
+      lastName: "Swanson",
       title: "Chief Analytics Officer",
       description:
-        "Chris is a junior in the College studying Computer Science and Mathematics. Last summer he interned at JP Morgan Chase, and in his free time enjoys playing soccer and watching movies.",
-      email: "cdt50@georgetown.edu",
-      linkedin: "https://www.linkedin.com/in/christopher-tengey-12555b24a/",
+        "Ty is a junior in the College studying Physics and Mathematics. Ty is the Co-Founder of College Canine, a university based pet care company. In his free time, he enjoys mountain biking, watching soccer, and gardening.",
+      email: "tps71@georgetown.edu",
+      linkedin: "https://www.linkedin.com/in/ty-swanson/",
     },
     {
-      firstName: "Rohan",
-      lastName: "Mistry",
+      firstName: "Navya",
+      lastName: "Dalmia",
       title: "Chief Consulting Officer",
       description:
-        "Rohan is a junior in the MSB studying Finance and OPAN. He is a student researcher at the Psaros Center for Financial Markets and Policy. In his free time he enjoys exploring cafes, mueseums and running.",
-      email: "rrm80@georgetown.edu",
-      linkedin: "https://www.linkedin.com/in/rohan-m-a026b3237/",
+        "Navya Dalmia is a junior in the college double majoring in math and economics with a minor in business studies. She is interested in data backed analyses and digital transformation specifically within fashion and luxury. Outside of work, she enjoys trying new restaurants in dc and doing yoga and pilates classes. ",
+      email: "nd631@georgetown.edu",
+      linkedin: "https://www.linkedin.com/in/navyadalmia/",
     },
     {
-      firstName: "Amanda",
-      lastName: "Hao",
+      firstName: "William",
+      lastName: "Yu",
       title: "Chief Training Officer",
       description:
-        "Amanda is a senior in the SFS studying Science Technology and International Affairs, and is pursuing a Masters in Data Science. She is a student researcher at the Massive Data Insitute and recently interned at the NBA. In her free time, she enjoys playing volleyball and reading.",
-      email: "alh326@georgetown.edu",
-      linkedin: "https://www.linkedin.com/in/amandahao/",
+        "William is a junior in the SFS studying International Economics. Outside of Hoyalytics, he is an intern at the U.S. Department of the Treasury and previously interned in the U.S. House of Representatives. In his free time, William enjoys playing soccer, working out, and playing poker.",
+      email: "wjy7@georgetown.edu",
+      linkedin: "https://www.linkedin.com/in/williamjyyu/",
     },
     {
-      firstName: "Leo",
-      lastName: "Ledlow",
+      firstName: "Gui",
+      lastName: "Lima",
       title: "Chief HR Officer",
       description:
-        "Leo is a sophomore in the SFS studying Science, Tech, and International Affairs. Outside of Hoyalytics, they are a PM with Hoya Developers and like visiting the monuments, graphic design, and cooking.",
-      email: "jdl162@georgetown.edu",
-      linkedin: "https://www.linkedin.com/in/jledlow/",
-    }
+        "Gui is a junior in the SFS studying Science, Technology and International Affairs. He is a Section Editor at Georgetown's Journal of International Affairs. In his free time, he enjoys watching movies, drinking coffee, and traveling.",
+      email: "gsl39@georgetown.edu",
+      linkedin: "https://www.linkedin.com/in/guilherme-silveira-lima/",
+    },
   ];
 
   const directors = [
@@ -153,21 +154,20 @@ const TeamBoardMembers = () => {
       title: "Director of Training",
       email: "#",
       linkedin: "#",
-    }
+    },
   ];
 
   const projectManagers = [
     { firstName: "Samantha", lastName: "Stein", title: "Project Manager" },
     { firstName: "William", lastName: "McLane", title: "Project Manager" },
     { firstName: "Laura", lastName: "Fan", title: "Project Manager" },
-    { firstName: "Ty", lastName: "Swanson", title: "Project Manager" },
+    { firstName: "Leo", lastName: "Ledlow", title: "Project Manager" },
     { firstName: "Andrew", lastName: "Kim", title: "Project Manager" },
     { firstName: "Sarah", lastName: "Liang", title: "Project Manager" },
     { firstName: "Victor", lastName: "Chen", title: "Project Manager" },
     { firstName: "Jaden", lastName: "Bobb", title: "Project Manager" },
   ];
-  
-  
+
   return (
     <div className="team-board-members">
       <h1 className="team-board-members-title">Hoyalytics Executive Board</h1>
@@ -179,7 +179,8 @@ const TeamBoardMembers = () => {
                 animateIn="animate__fadeInUp"
                 className="team-member-exec"
                 animateOnce={true}
-                key={member.firstName}>
+                key={member.firstName}
+              >
                 <img
                   src={
                     "/headshots-2024/" +
@@ -214,7 +215,8 @@ const TeamBoardMembers = () => {
                 animateIn="animate__fadeInUp"
                 className="team-member-director"
                 animateOnce={true}
-                key={member.firstName}>
+                key={member.firstName}
+              >
                 <img
                   src={
                     "/headshots-2024/" +
@@ -236,7 +238,7 @@ const TeamBoardMembers = () => {
             );
           })}
         </div>
-        
+
         <h1 className="team-board-members-title">Project Managers</h1>
         <div className="team-board-members-directors">
           {projectManagers.map((member, index) => {
@@ -245,7 +247,8 @@ const TeamBoardMembers = () => {
                 animateIn="animate__fadeInUp"
                 className="team-member-director"
                 animateOnce={true}
-                key={member.firstName}>
+                key={member.firstName}
+              >
                 <img
                   src={
                     "/headshots-2024/" +

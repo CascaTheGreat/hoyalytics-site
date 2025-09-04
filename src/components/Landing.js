@@ -6,7 +6,7 @@ import { TypeAnimation } from "react-type-animation";
 
 const Landing = () => {
   //Modify these variables to change the homepage text
-  const header = "Georgetown's Premier Data Analytics Consulting Organization.";
+  const header = "Georgetown's Premier Data Analytics Consulting Organization";
   const subHeader =
     "We use advanced technical skills to draw unique insights from data, enabling our clients to grow and succeed.";
 
